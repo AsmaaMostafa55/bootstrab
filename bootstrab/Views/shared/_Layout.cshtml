@@ -1,0 +1,58 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @* <link rel="stylesheet" href="~/LIB/bootstrap/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <center>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-dark">Home</a>
+            <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary">About</a>
+            <a asp-controller="Home" asp-action="Privacy" class="btn btn-success">Privacy</a>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary">Contact</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-danger">Login</a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+@*
+            <a class="btn btn-primary" href="/Home/Index">Home</a>
+            <a class="btn btn-danger" href="/Home/AboutUs">Aboutus</a>
+            <a class="btn btn-light" href=" /Home/Privacy">Privacy</a>
+            <a class="btn btn-warning" href="/Home/Contact Us">Contact Us</a>
+
+
+            <a href="/Account/Login" class="btn btn-dark">Login</a>
+            <a href="/Account/Register" class="btn btn-info"> register</a>
+
+
+            @Html.ActionLink("Home", "Index", "Home", null, new {@class="btn btn-primary"})
+
+            *@
+          
+
+        </center>
+
+
+    </nav>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    @*start footer*@
+    <footer>
+        <center>
+            <div>
+                <p>CopyRights &copy;@DateTime.Now.Year</p>
+            </div>
+        </center>
+    </footer>
+   
+</body>
+</html>
